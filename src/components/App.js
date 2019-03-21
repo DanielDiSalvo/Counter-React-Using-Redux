@@ -12,9 +12,9 @@ class App extends Component {
         </header>
         <section>
           <h2><span>{this.props.count}</span></h2>
-          <button className="button" onClick={this.props.onAgeUp}>Up</button>
-          <button className="button" onClick={this.props.onAgeDown}>Down</button>
-          <button className="button" onClick={this.props.onAgeReset}>Reset</button>
+          <button className="button" onClick={this.props.onCountUp}>Up</button>
+          <button className="button" onClick={this.props.onCountDown}>Down</button>
+          <button className="button" onClick={this.props.onCountReset}>Reset</button>
           <p className="counter_text">
             This counter goes from 0 to 20.<br/>
             Reset button will reset counter to 0.
@@ -33,9 +33,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAgeUp: () => dispatch({type: 'AGE_UP'}),
-    onAgeDown: () => dispatch({type: 'AGE_DOWN'}),
-    onAgeReset: () => dispatch({type: 'AGE_RESET'})
+    onCountUp: () => dispatch({type: 'COUNT_UP'}),
+    onCountDown: () => dispatch({type: 'COUNT_DOWN'}),
+    onCountReset: () => dispatch({type: 'COUNT_RESET'})
   }
 }
 

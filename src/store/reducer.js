@@ -5,18 +5,18 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     const newState = {...state};
 
-    switch(action.type){
-        case 'AGE_UP':
-            if(newState.count < 20) {
+    switch(action.type) {
+        case 'COUNT_UP':
+            if (newState.count < 20) {
                 newState.count++;
             }
             break;
-        case 'AGE_DOWN':
+        case 'COUNT_DOWN':
             if (newState.count >=1) {
                 newState.count--;
             }
             break;
-        case 'AGE_RESET':
+        case 'COUNT_RESET':
             newState.count = 0
             break;
         }
